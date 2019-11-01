@@ -30,9 +30,7 @@ describe Course, type: :model do
 
       biology.course_students.push(laura_grade, meg_grade, mike_grade)
 
-      student_names = biology.students_by_highest_grade.map(&:name)
-
-      expect(student_names).to eq([meg.name, mike.name, laura.name])
+      expect(biology.students_by_highest_grade).to eq([meg.name, mike.name, laura.name])
     end
   end
 end
