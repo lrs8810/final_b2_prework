@@ -1,0 +1,7 @@
+<h2><%= @course.name %></h2>
+
+  <% @course.students_by_highest_grade.each do |student| %>
+    <section class= 'students'>
+        <li><%= student.name %></li>
+    </section>
+  <% end %>
