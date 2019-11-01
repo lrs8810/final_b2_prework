@@ -5,6 +5,6 @@ class Student < ApplicationRecord
   validates_presence_of :name
 
   def course_name_grade
-    Course.joins(:course_students).select('course_students.grade, courses.*')
+    courses.joins(:course_students).select('course_students.grade, courses.*')
   end
 end
